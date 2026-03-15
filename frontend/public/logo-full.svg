@@ -1,0 +1,28 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AMINO DOCK Logo</title>
+  <desc id="desc">AMINO in black and DOCK in red with a light molecular line art behind.</desc>
+
+  <rect width="1200" height="400" fill="transparent"/>
+
+  <g stroke="#4a4a4a" stroke-width="2.5" fill="none" opacity="0.35">
+    <path d="M590 60 L660 100 L700 70 L765 105 L815 80 L900 130"/>
+    <path d="M610 180 L670 150 L730 175 L790 145 L860 175 L920 150"/>
+    <path d="M560 240 L625 210 L685 245 L745 220 L810 250 L875 220"/>
+    <path d="M520 125 L545 170 L520 215 L470 215 L445 170 L470 125 Z"/>
+    <circle cx="590" cy="60" r="8"/>
+    <circle cx="660" cy="100" r="8"/>
+    <circle cx="700" cy="70" r="8"/>
+    <circle cx="765" cy="105" r="8"/>
+    <circle cx="815" cy="80" r="8"/>
+    <circle cx="900" cy="130" r="8"/>
+    <circle cx="610" cy="180" r="8"/>
+    <circle cx="670" cy="150" r="8"/>
+    <circle cx="730" cy="175" r="8"/>
+    <circle cx="790" cy="145" r="8"/>
+    <circle cx="860" cy="175" r="8"/>
+    <circle cx="920" cy="150" r="8"/>
+  </g>
+
+  <text x="215" y="255" fill="#090909" font-size="150" font-family="Anton, Arial, sans-serif" letter-spacing="2">AMINO</text>
+  <text x="640" y="255" fill="#c7131f" font-size="150" font-family="Anton, Arial, sans-serif" letter-spacing="2">DOCK</text>
+</svg>
