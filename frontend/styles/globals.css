@@ -143,3 +143,154 @@ textarea {
     repeating-linear-gradient(45deg, rgba(17, 17, 17, 0.08) 0 10px, transparent 10px 20px);
   border: 1px solid var(--border-soft);
 }
+
+.home-orbit-bg {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(211, 11, 21, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(17, 17, 17, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(246, 246, 246, 0.8));
+}
+
+.dark .home-orbit-bg {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(211, 11, 21, 0.26), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(255, 255, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.94), rgba(24, 24, 24, 0.92));
+}
+
+.mesh-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, rgba(211, 11, 21, 0.14), transparent 42%),
+    repeating-linear-gradient(140deg, rgba(17, 17, 17, 0.03) 0 10px, transparent 10px 20px);
+}
+
+.grain-overlay {
+  opacity: 0.16;
+  background-image: radial-gradient(rgba(17, 17, 17, 0.45) 0.45px, transparent 0.45px);
+  background-size: 4px 4px;
+}
+
+.dark .grain-overlay {
+  opacity: 0.11;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 0.45px, transparent 0.45px);
+}
+
+.brand-tape {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(211, 11, 21, 0.12), rgba(255, 255, 255, 0.85), rgba(211, 11, 21, 0.12));
+}
+
+.dark .brand-tape {
+  background:
+    linear-gradient(90deg, rgba(211, 11, 21, 0.22), rgba(17, 17, 17, 0.88), rgba(211, 11, 21, 0.22));
+}
+
+.brand-tape-track {
+  display: flex;
+  width: max-content;
+  animation: brand-slide 24s linear infinite;
+}
+
+.brand-tape-line {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.brand-tape-chip {
+  white-space: nowrap;
+  border: 1px solid rgba(211, 11, 21, 0.35);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.68rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: #7c060d;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark .brand-tape-chip {
+  color: #f8d2d5;
+  background-color: rgba(17, 17, 17, 0.75);
+}
+
+@keyframes brand-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(130deg, rgba(211, 11, 21, 0.16), transparent 42%);
+  opacity: 0;
+  transition: opacity var(--duration-standard) var(--ease-standard);
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.footer-aurora {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% -10%, rgba(211, 11, 21, 0.28), transparent 36%),
+    radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.08), transparent 35%),
+    linear-gradient(180deg, #141414, #090909);
+}
+
+.footer-aurora::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.34;
+}
+
+.product-orbit-bg {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(211, 11, 21, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 20%, rgba(17, 17, 17, 0.1), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(246, 246, 246, 0.85));
+}
+
+.dark .product-orbit-bg {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(211, 11, 21, 0.24), transparent 32%),
+    radial-gradient(circle at 88% 20%, rgba(255, 255, 255, 0.06), transparent 30%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.96), rgba(24, 24, 24, 0.94));
+}
+
+.product-visual {
+  background:
+    linear-gradient(135deg, rgba(211, 11, 21, 0.1), rgba(255, 255, 255, 0.6)),
+    repeating-linear-gradient(135deg, rgba(17, 17, 17, 0.05) 0 10px, transparent 10px 20px);
+}
