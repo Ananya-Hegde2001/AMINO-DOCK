@@ -294,3 +294,269 @@ textarea {
     linear-gradient(135deg, rgba(211, 11, 21, 0.1), rgba(255, 255, 255, 0.6)),
     repeating-linear-gradient(135deg, rgba(17, 17, 17, 0.05) 0 10px, transparent 10px 20px);
 }
+
+.builder-arena {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(211, 11, 21, 0.18), transparent 36%),
+    radial-gradient(circle at 88% 6%, rgba(17, 17, 17, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 246, 246, 0.92));
+}
+
+.dark .builder-arena {
+  background:
+    radial-gradient(circle at 8% 8%, rgba(211, 11, 21, 0.24), transparent 36%),
+    radial-gradient(circle at 88% 6%, rgba(255, 255, 255, 0.09), transparent 34%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.95), rgba(24, 24, 24, 0.94));
+}
+
+.builder-grid {
+  background-image: linear-gradient(rgba(17, 17, 17, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.45;
+}
+
+.dark .builder-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  opacity: 0.35;
+}
+
+.builder-glow::before,
+.builder-glow::after {
+  content: '';
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 999px;
+  filter: blur(58px);
+  opacity: 0.3;
+  animation: drift-glow 9s ease-in-out infinite alternate;
+}
+
+.builder-glow::before {
+  left: -6rem;
+  top: 20%;
+  background: rgba(211, 11, 21, 0.4);
+}
+
+.builder-glow::after {
+  right: -7rem;
+  bottom: 8%;
+  background: rgba(17, 17, 17, 0.25);
+  animation-delay: 0.6s;
+}
+
+.dark .builder-glow::after {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+@keyframes drift-glow {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(0, -14px, 0) scale(1.08);
+  }
+}
+
+.combo-arena {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(211, 11, 21, 0.16), transparent 38%),
+    radial-gradient(circle at 86% 10%, rgba(17, 17, 17, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(246, 246, 246, 0.9));
+}
+
+.dark .combo-arena {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(211, 11, 21, 0.24), transparent 38%),
+    radial-gradient(circle at 86% 10%, rgba(255, 255, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.95), rgba(24, 24, 24, 0.93));
+}
+
+.combo-noise {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.combo-deal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(132deg, rgba(211, 11, 21, 0.14), transparent 45%);
+}
+
+.auth-arena {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(211, 11, 21, 0.16), transparent 36%),
+    radial-gradient(circle at 88% 10%, rgba(17, 17, 17, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 246, 246, 0.9));
+}
+
+.dark .auth-arena {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(211, 11, 21, 0.24), transparent 36%),
+    radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.95), rgba(24, 24, 24, 0.93));
+}
+
+.auth-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(246, 246, 246, 0.72));
+  box-shadow: 0 16px 36px rgba(211, 11, 21, 0.08);
+}
+
+.dark .auth-card {
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.92), rgba(17, 17, 17, 0.88));
+}
+
+.auth-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(130deg, rgba(211, 11, 21, 0.12), transparent 44%);
+}
+
+.auth-grid {
+  background-image: linear-gradient(rgba(17, 17, 17, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.44;
+}
+
+.dark .auth-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  opacity: 0.35;
+}
+
+.about-arena {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(211, 11, 21, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(17, 17, 17, 0.11), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(246, 246, 246, 0.9));
+}
+
+.dark .about-arena {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(211, 11, 21, 0.24), transparent 38%),
+    radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.95), rgba(24, 24, 24, 0.93));
+}
+
+.about-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(246, 246, 246, 0.72));
+  box-shadow: 0 16px 38px rgba(211, 11, 21, 0.08);
+}
+
+.dark .about-card {
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.92), rgba(17, 17, 17, 0.88));
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(132deg, rgba(211, 11, 21, 0.12), transparent 46%);
+}
+
+.about-point-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(246, 246, 246, 0.68));
+  box-shadow: 0 14px 30px rgba(211, 11, 21, 0.08);
+}
+
+.dark .about-point-card {
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.9), rgba(17, 17, 17, 0.86));
+}
+
+.about-point-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(128deg, rgba(211, 11, 21, 0.12), transparent 45%);
+}
+
+.about-grid {
+  background-image: linear-gradient(rgba(17, 17, 17, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.44;
+}
+
+.dark .about-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  opacity: 0.35;
+}
+
+.contact-arena {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(211, 11, 21, 0.16), transparent 38%),
+    radial-gradient(circle at 88% 10%, rgba(17, 17, 17, 0.1), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(246, 246, 246, 0.9));
+}
+
+.dark .contact-arena {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(211, 11, 21, 0.24), transparent 38%),
+    radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(17, 17, 17, 0.95), rgba(24, 24, 24, 0.93));
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(246, 246, 246, 0.72));
+  box-shadow: 0 16px 36px rgba(211, 11, 21, 0.08);
+}
+
+.dark .contact-card {
+  background: linear-gradient(180deg, rgba(24, 24, 24, 0.92), rgba(17, 17, 17, 0.88));
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(132deg, rgba(211, 11, 21, 0.12), transparent 46%);
+}
+
+.contact-grid {
+  background-image: linear-gradient(rgba(17, 17, 17, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.44;
+}
+
+.dark .contact-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  opacity: 0.35;
+}
