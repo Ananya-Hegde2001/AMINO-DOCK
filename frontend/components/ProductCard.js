@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
+import { formatINR } from '../utils/currency';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
@@ -36,7 +37,7 @@ const ProductCard = ({ product }) => {
         </span>
       </div>
 
-      <p className="mt-4 brand-wordmark text-4xl leading-none text-red-600">${product.price}</p>
+      <p className="mt-4 brand-wordmark text-4xl leading-none text-red-600">{formatINR(product.price)}</p>
 
       {product.flavours?.length > 0 && (
         <select
