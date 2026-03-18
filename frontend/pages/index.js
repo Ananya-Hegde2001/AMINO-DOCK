@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import ComboDealsSection from '../components/ComboDealsSection';
 import AIStackBuilder from '../components/AIStackBuilder';
 import { FALLBACK_PRODUCTS } from '../utils/constants';
+import { formatINR } from '../utils/currency';
 
 const revealContainer = {
   hidden: { opacity: 0 },
@@ -184,7 +185,7 @@ const HomePage = () => {
                 <h3 className="mt-2 text-2xl text-black dark:text-white">{item.name}</h3>
                 <p className="mt-3 text-sm text-[var(--text-muted)]">{item.description}</p>
                 <div className="mt-4 flex items-center justify-between">
-                  <p className="brand-wordmark text-3xl text-black dark:text-white">${item.price}</p>
+                  <p className="brand-wordmark text-3xl text-black dark:text-white">{formatINR(item.price)}</p>
                   <Link
                     href="/products"
                     className="rounded-full bg-red-600 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white"
