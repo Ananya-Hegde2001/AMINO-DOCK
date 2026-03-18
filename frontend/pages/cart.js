@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 import api from '../utils/api';
+import { formatINR } from '../utils/currency';
 
 const CartPage = () => {
   const { items, removeFromCart, clearCart, total } = useCart();
@@ -99,7 +100,7 @@ const CartPage = () => {
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="brand-wordmark text-3xl leading-none text-red-600">${(item.price * item.qty).toFixed(2)}</p>
+                      <p className="brand-wordmark text-3xl leading-none text-red-600">{formatINR(item.price * item.qty)}</p>
                       <button
                         className="mt-2 text-xs font-semibold uppercase tracking-[0.1em] text-red-500 hover:text-red-700 dark:hover:text-red-300"
                         type="button"
@@ -118,7 +119,7 @@ const CartPage = () => {
             <h2 className="text-xl font-semibold">Checkout Summary</h2>
             <div className="mt-3 rounded-xl border border-red-500/20 bg-white/70 p-3 dark:bg-black/20">
               <p className="text-sm text-[var(--text-muted)]">Total</p>
-              <p className="brand-wordmark mt-1 text-5xl leading-none text-red-600">${total.toFixed(2)}</p>
+              <p className="brand-wordmark mt-1 text-5xl leading-none text-red-600">{formatINR(total)}</p>
             </div>
 
             <form className="mt-4 space-y-2.5" onSubmit={checkout}>
