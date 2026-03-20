@@ -39,7 +39,7 @@ export const FALLBACK_PRODUCTS = [
     slug: 'elite-whey-concentrate',
     flavours: ['Chocolate', 'Plain Coffee'],
     sizes: ['1kg', '2kg'],
-    price: 44,
+    price: 2499,
     description: 'High-quality whey concentrate with clean premium sourcing.'
   },
   {
@@ -48,7 +48,7 @@ export const FALLBACK_PRODUCTS = [
     slug: 'elite-iso-blend',
     flavours: ['Chocolate', 'Plain Coffee'],
     sizes: ['1kg', '2kg'],
-    price: 52,
+    price: 2999,
     description: 'Balanced isolate blend for lean recovery and performance.'
   },
   {
@@ -57,7 +57,7 @@ export const FALLBACK_PRODUCTS = [
     slug: 'elite-whey-isolate',
     flavours: ['Chocolate', 'Plain Coffee', 'Unflavoured'],
     sizes: ['1kg', '2kg'],
-    price: 57,
+    price: 3499,
     description: 'Ultra-filtered whey isolate with no amino spiking.'
   },
   {
@@ -66,7 +66,7 @@ export const FALLBACK_PRODUCTS = [
     slug: 'elite-gainer',
     flavours: ['Choco Peanut', 'Caffe Peanut'],
     sizes: ['1kg', '2kg'],
-    price: 49,
+    price: 2799,
     description: 'Calorie-dense gainer blend for quality mass support.'
   },
   {
@@ -75,7 +75,7 @@ export const FALLBACK_PRODUCTS = [
     slug: 'creatine-monohydrate',
     flavours: ['Citrus'],
     sizes: ['100g', '250g'],
-    price: 19,
+    price: 899,
     description: 'Pure micronized creatine for strength and power output.'
   },
   {
@@ -85,7 +85,7 @@ export const FALLBACK_PRODUCTS = [
     flavours: [],
     sizes: [],
     capsules: 60,
-    price: 16,
+    price: 699,
     description: 'Premium omega support for heart, joints, and recovery.'
   }
 ];
