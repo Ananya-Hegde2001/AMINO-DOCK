@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import { formatINR } from '../utils/currency';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, className = '' }) => {
   const { addToCart } = useCart();
   const [flavour, setFlavour] = useState(product.flavours?.[0] || '');
   const [size, setSize] = useState(product.sizes?.[0] || '');
@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.28, ease: 'easeInOut', type: 'tween' }}
-      className="spotlight-card card-glow rounded-2xl border border-red-500/20 bg-gradient-to-b from-white to-red-50 p-5 shadow-[0_12px_35px_rgba(211,11,21,0.1)] dark:from-zinc-900 dark:to-zinc-950"
+      className={`spotlight-card card-glow rounded-2xl border border-red-500/20 bg-gradient-to-b from-white to-red-50 p-5 shadow-[0_12px_35px_rgba(211,11,21,0.1)] dark:from-zinc-900 dark:to-zinc-950 ${className}`}
     >
       <div className="product-visual mb-4 flex items-end justify-between rounded-2xl border border-red-500/20 p-4">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Premium Formula</p>
