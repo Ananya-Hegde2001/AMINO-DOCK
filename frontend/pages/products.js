@@ -110,9 +110,14 @@ const ProductsPage = () => {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: idx * 0.03, ease: 'easeInOut', type: 'tween' }}
+                className="rounded-2xl border border-red-500/20 bg-white/85 p-3 shadow-[0_12px_35px_rgba(211,11,21,0.08)] backdrop-blur dark:bg-zinc-900/70"
               >
-                <ProductCard product={product} />
-                {product._id && <ReviewSection productId={product._id} />}
+                <ProductCard product={product} className="border-none shadow-none" />
+                {product._id && (
+                  <div className="mt-3 border-t border-red-500/20 pt-3">
+                    <ReviewSection productId={product._id} embedded />
+                  </div>
+                )}
               </motion.div>
             ))}
           </motion.div>
