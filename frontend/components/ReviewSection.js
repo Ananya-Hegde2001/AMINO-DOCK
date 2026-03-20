@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import api from '../utils/api';
 
-const ReviewSection = ({ productId }) => {
+const ReviewSection = ({ productId, embedded = false }) => {
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
   const [message, setMessage] = useState('');
@@ -21,7 +21,14 @@ const ReviewSection = ({ productId }) => {
   };
 
   return (
-    <form onSubmit={submitReview} className="mt-3 rounded-xl border border-red-500/25 bg-white/75 p-4 dark:bg-zinc-900/65">
+    <form
+      onSubmit={submitReview}
+      className={
+        embedded
+          ? 'rounded-xl border border-red-500/15 bg-white/50 p-4 dark:bg-black/20'
+          : 'mt-3 rounded-xl border border-red-500/25 bg-white/75 p-4 dark:bg-zinc-900/65'
+      }
+    >
       <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-600">Add review</p>
       <select
         className="w-full rounded-lg border border-red-500/20 bg-white/70 px-3 py-2 text-sm dark:bg-black/20"
