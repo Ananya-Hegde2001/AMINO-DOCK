@@ -6,7 +6,7 @@ const products = [
     category: 'protein',
     flavours: ['Chocolate', 'Plain Coffee'],
     sizes: ['1kg', '2kg'],
-    price: 44,
+    price: 2499,
     tags: ['clean', 'premium', 'whey']
   },
   {
@@ -16,7 +16,7 @@ const products = [
     category: 'protein',
     flavours: ['Chocolate', 'Plain Coffee'],
     sizes: ['1kg', '2kg'],
-    price: 52,
+    price: 2999,
     tags: ['lean', 'fast-absorbing']
   },
   {
@@ -26,7 +26,7 @@ const products = [
     category: 'protein',
     flavours: ['Chocolate', 'Plain Coffee', 'Unflavoured'],
     sizes: ['1kg', '2kg'],
-    price: 57,
+    price: 3499,
     tags: ['isolate', 'zero-added-sugar']
   },
   {
@@ -36,7 +36,7 @@ const products = [
     category: 'gainer',
     flavours: ['Choco Peanut', 'Caffe Peanut'],
     sizes: ['1kg', '2kg'],
-    price: 49,
+    price: 2799,
     tags: ['mass', 'energy']
   },
   {
@@ -46,7 +46,7 @@ const products = [
     category: 'performance',
     flavours: ['Citrus'],
     sizes: ['100g', '250g'],
-    price: 19,
+    price: 899,
     tags: ['strength', 'performance']
   },
   {
@@ -57,7 +57,7 @@ const products = [
     flavours: [],
     sizes: [],
     capsules: 60,
-    price: 16,
+    price: 699,
     tags: ['omega', 'wellness']
   }
 ];
